@@ -1,0 +1,16 @@
+{
+  "name": "test-chat-app",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=0.10.3 <0.12"
+  },
+  "description": "Test chat app",
+  "dependencies": {
+    "faye": "~1.0.1"
+  },
+  "devDependencies": {},
+  "repository": "",
+  "author": "",
+  "license": "Proprietary"
+}
