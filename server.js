@@ -1,9 +1,10 @@
 'use strict';
 
-var http = require('http'),
-    express = require('express'),
+var http       = require('http'),
+    express    = require('express'),
     bodyParser = require ('body-parser'),
-    faye = require('faye');
+    morgan     = require ('morgan'),
+    faye       = require('faye');
 
 
 var bayeux = new faye.NodeAdapter({
@@ -17,6 +18,7 @@ var server = http.createServer(app);
 
 bayeux.attach(server);
 
+app.use(morgan());
 app.use(bodyParser());
 app.use(express.static(__dirname + '/public'));
 
